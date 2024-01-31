@@ -32,5 +32,3 @@ with psycopg2.connect(host="localhost", database="north", user="postgres", passw
         cur.executemany("INSERT INTO customers VALUES (%s, %s, %s)", customers_data)
         cur.executemany("INSERT INTO employees VALUES (%s, %s, %s, %s, %s, %s)", employees_data)
         cur.executemany("INSERT INTO orders VALUES (%s, %s, %s, %s, %s)", orders_data)
-
-conn.close()
